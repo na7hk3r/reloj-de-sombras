@@ -1,11 +1,10 @@
 import React from 'react';
-import { Beaker } from 'lucide-react';
 
 const Laboratory: React.FC = () => (
   <div className="min-h-screen bg-gradient-to-b from-[#0A0A0F] to-[#14141E] text-white p-8">
     <div className="max-w-4xl mx-auto">
       <div className="text-center mb-16 animate-fade-in">
-        <Beaker className="w-20 h-20 mx-auto text-gold mb-6" />
+        <img src="https://tinyurl.com/bdefwzpn" alt="73-logo" className="w-24 mx-auto mt-6 mb-4" />
         <h1 className="text-5xl font-display text-gold mb-4 animate-glow">Laboratorio 73</h1>
         <p className="text-2xl text-silver font-display tracking-wider">Has descubierto el portal entre la lógica y el misterio</p>
       </div>
