@@ -24,7 +24,7 @@ function App() {
 
   const animateTransformation = () => {
     const steps = [
-      '1001001', // Original binary
+      '1001001',
       '1001001 = 64 + 8 + 1',
       '1001001 = 73',
       '73'
