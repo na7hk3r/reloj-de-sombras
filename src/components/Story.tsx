@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import StoryItem from './StoryItem';
 
 interface StoryProps {
@@ -7,6 +7,7 @@ interface StoryProps {
 }
 
 const Story: React.FC<StoryProps> = ({ storyVisible, binaryInput }) => {
+  const [progress, setProgress] = useState<number[]>([]);
   const storyItems = [
     {
       statement: 'El sol siempre regresa, incluso cuando la noche parece eterna.',
@@ -44,6 +45,12 @@ const Story: React.FC<StoryProps> = ({ storyVisible, binaryInput }) => {
       correctValue: '1'
     }
   ];
+
+  useEffect(() => {
+    // Cargar el progreso desde el almacenamiento local
+    const savedProgress = JSON.parse(localStorage.getItem('progress') || '[]');
+    setProgress(savedProgress);
+  }, []);
 
   return (
     <div className={`prose prose-invert max-w-none transition-opacity duration-1000 ${storyVisible ? 'opacity-100' : 'opacity-0'}`}>

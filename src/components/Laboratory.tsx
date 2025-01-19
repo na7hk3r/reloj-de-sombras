@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Laboratory: React.FC = () => {
   const [alchemyVisible, setAlchemyVisible] = useState(false);
@@ -7,6 +7,10 @@ const Laboratory: React.FC = () => {
     setAlchemyVisible(true);
     document.getElementById('alchemy-section')?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#0A0A0F] to-[#14141E] text-white p-8">
@@ -21,10 +25,10 @@ const Laboratory: React.FC = () => {
           <p>"Este código no es un final, sino un comienzo. Para quien lo descubra, quizás haya algo más allá de lo evidente."</p>
         </div>
         <div className="border border-gold p-4 rounded-lg mb-8">
-        <p className="text-center text-2xl text-gold">
-          Presta atención a las secciones, quién busca bien puede encontrar más información.
-        </p>
-      </div>
+          <p className="text-center text-2xl text-gold">
+            Presta atención a las secciones, quién busca bien puede encontrar más información.
+          </p>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-card p-8 mt-12 rounded-lg border border-gold/20 backdrop-blur-sm animate-fade-in" style={{ animationDelay: '0.3s' }}>
             <h2 className="text-3xl font-display text-gold mb-6">El Significado del 73</h2>
