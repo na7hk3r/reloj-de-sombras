@@ -5,7 +5,9 @@ const Laboratory: React.FC = () => {
 
   const handleAlchemyClick = () => {
     setAlchemyVisible(true);
-    document.getElementById('alchemy-section')?.scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+      document.getElementById('alchemy-section')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
   };
 
   useEffect(() => {

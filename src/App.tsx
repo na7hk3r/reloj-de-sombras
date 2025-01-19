@@ -7,7 +7,6 @@ function App() {
   const [binaryInput, setBinaryInput] = useState('');
   const [isCorrect, setIsCorrect] = useState(false);
   const [showError, setShowError] = useState(false);
-  const [revealedNumber, setRevealedNumber] = useState('');
   const [currentSection, setCurrentSection] = useState('story');
   const [storyVisible, setStoryVisible] = useState(false);
   const [transformationSteps, setTransformationSteps] = useState<string[]>([]);
@@ -38,7 +37,6 @@ function App() {
       } else {
         clearInterval(interval);
         setTimeout(() => {
-          setRevealedNumber('73');
           setTimeout(() => {
             setCurrentSection('lab');
           }, 2000);
