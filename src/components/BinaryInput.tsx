@@ -17,7 +17,7 @@ const BinaryInput: React.FC<BinaryInputProps> = ({ binaryInput, isCorrect, showE
   };
 
   return (
-    <div className={`fixed bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-[#0A0A0F] via-[#0A0A0F]/95 to-transparent backdrop-blur-sm`}>
+    <div className={`fixed bottom-0 left-0 right-0 p-4 md:p-8 bg-gradient-to-t from-[#0A0A0F] via-[#0A0A0F]/95 to-transparent backdrop-blur-sm`}>
       <div className="max-w-md mx-auto">
         <div className="relative">
           <input
@@ -26,7 +26,7 @@ const BinaryInput: React.FC<BinaryInputProps> = ({ binaryInput, isCorrect, showE
             onChange={handleBinaryInput}
             onKeyDown={handleKeyDown}
             placeholder="Ingresa el código binario..."
-            className={`w-full text-lg px-6 py-4 bg-card/80 border-2 ${
+            className={`w-full text-lg px-4 py-2 md:px-6 md:py-4 bg-card/80 border-2 ${
               isCorrect ? 'border-green-500' : showError ? 'border-red-500' : 'border-gold/30'
             } rounded-lg text-xl font-mono tracking-wider text-center ${
               isCorrect ? 'text-green-500' : 'text-gold'
@@ -34,13 +34,13 @@ const BinaryInput: React.FC<BinaryInputProps> = ({ binaryInput, isCorrect, showE
             disabled={isCorrect}
             autoFocus
           />
-          <Binary className="absolute left-4 top-1/2 -translate-y-1/2 text-gold/50 w-6 h-6" />
+          <Binary className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 text-gold/50 w-4 h-4 md:w-6 md:h-6" />
         </div>
         {!isCorrect && (
           <button
             onClick={validateCode}
             disabled={binaryInput.length !== 7}
-            className="mt-4 w-full py-3 px-6 bg-gold/10 hover:bg-gold/20 disabled:opacity-50 
+            className="mt-4 w-full py-2 md:py-3 px-4 md:px-6 bg-gold/10 hover:bg-gold/20 disabled:opacity-50 
                      disabled:cursor-not-allowed rounded-lg text-gold transition-all duration-300
                      border border-gold/30 hover:border-gold/50 font-display tracking-wide text-lg"
           >

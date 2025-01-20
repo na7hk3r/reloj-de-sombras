@@ -19,7 +19,7 @@ const StoryItem: React.FC<StoryItemProps> = ({ index, binaryInput, statement, hi
   }, [isCorrectInput, index]);
 
   return (
-    <div ref={itemRef} className={`p-6 border ${isCorrectInput ? 'border-gold/20' : 'border-silver/20'} rounded-lg bg-card backdrop-blur-sm animate-fade-in`} style={{ animationDelay: `${0.2 * (index + 1)}s` }}>
+    <div ref={itemRef} className={`p-4 md:p-6 border ${isCorrectInput ? 'border-gold/20' : 'border-silver/20'} rounded-lg bg-card backdrop-blur-sm animate-fade-in`} style={{ animationDelay: `${0.2 * (index + 1)}s` }}>
       {isCorrectInput && <p><span className={`text-${correctValue === '1' ? 'gold' : 'silver'} font-display`}>({correctValue} - {correctValue === '1' ? 'true' : 'false'})</span><br/></p>}
       <p>{statement}</p>
       {isCorrectInput && (

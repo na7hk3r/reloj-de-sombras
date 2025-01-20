@@ -47,17 +47,17 @@ const Story: React.FC<StoryProps> = ({ storyVisible, binaryInput }) => {
 
   return (
     <div className={`prose prose-invert max-w-none transition-opacity duration-1000 ${storyVisible ? 'opacity-100' : 'opacity-0'}`}>
-      <h1 className="text-5xl font-display mb-12 text-center text-gold animate-glow">El reloj de sombras</h1>
-      <div className="border border-gold p-4 rounded-lg mb-8">
-        <p className="text-center text-2xl text-gold">
+      <h1 className="text-3xl md:text-5xl font-display mb-8 md:mb-12 text-center text-gold animate-glow">El reloj de sombras</h1>
+      <div className="border border-gold p-4 md:p-8 rounded-lg mb-8">
+        <p className="text-center text-xl md:text-2xl text-gold">
           Evalúa cada frase con lógica booleana. Si es verdadera, representa con 1; si es falsa, representa con 0.
         </p>
-        <p className="text-center text-2xl text-gold">
+        <p className="text-center text-xl md:text-2xl text-gold">
           A medida que resuelvas cada enigma, anótalo en el input del final; el alquimista avanzará en su búsqueda de la verdad.
         </p>
       </div>
-      <div className="space-y-8 text-xl leading-relaxed">
-        <p className="animate-fade-in text-2xl" style={{ animationDelay: '0.2s' }}>
+      <div className="space-y-4 md:space-y-8 text-lg md:text-xl leading-relaxed">
+        <p className="animate-fade-in text-xl md:text-2xl" style={{ animationDelay: '0.2s' }}>
           En un laboratorio olvidado por el tiempo, un lugar donde las luces titilaban como estrellas atrapadas, 
           un alquimista trabajaba en silencio. No buscaba oro ni fórmulas de poder; su meta era más sutil: 
           desentrañar la lógica de la existencia misma.
